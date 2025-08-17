@@ -53,8 +53,14 @@
                 <li><a href="#contact" class="nav-link" data-en="Contact Us" data-ja="お問い合わせ">Contact Us</a></li>
             </ul>
 
-            <!-- Language toggle button -->
-            <button id="lang-toggle">日本語</button>
+            <!-- Auth and language controls -->
+            <div class="nav-controls">
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn btn-outline" data-en="Login" data-ja="ログイン">Login</a>
+                    <a href="signup.html" class="btn btn-primary" data-en="Sign Up" data-ja="新規登録">Sign Up</a>
+                </div>
+                <button id="lang-toggle">日本語</button>
+            </div>
         </nav>
     </header>
 
@@ -399,8 +405,16 @@
 
         <!-- Notes Grid -->
         <div class="notes-grid">
+            <!-- No Results Message -->
+            <div id="noResultsMessage" class="no-results" style="display: none; grid-column: 1 / -1; text-align: center; padding: 40px 20px;">
+                <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity: 0.5; margin-bottom: 16px;">
+                    <path d="M21 10H3M21 12V8.2C21 7.0799 21 6.51984 20.782 6.09202C20.5903 5.71569 20.2843 5.40973 19.908 5.21799C19.4802 5 18.9201 5 17.8 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.0799 3 8.2V15.8C3 16.9201 3 17.4802 3.21799 17.908C3.40973 18.2843 3.71569 18.5903 4.09202 18.782C4.51984 19 5.0799 19 6.2 19H12M16 19L19 22M19 19L16 22M19 16V22M10 9H14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <h3>No notes found</h3>
+                <p>Try adjusting your search or filter criteria</p>
+            </div>
             <!-- Note Card 1 -->
-            <div class="note-card" data-topic="programming">
+            <div class="note-card" data-topic="programming" data-date="2025-03-15" data-downloads="147">
                 <div class="note-header">
                     <span class="note-tag">Programming</span>
                     <span class="note-date">March 15, 2025</span>
@@ -420,7 +434,7 @@
             </div>
 
             <!-- Note Card 2 -->
-            <div class="note-card" data-topic="databases">
+            <div class="note-card" data-topic="databases" data-date="2025-03-10" data-downloads="203">
                 <div class="note-header">
                     <span class="note-tag">Databases</span>
                     <span class="note-date">March 10, 2025</span>
@@ -440,7 +454,7 @@
             </div>
 
             <!-- Note Card 3 -->
-            <div class="note-card" data-topic="web">
+            <div class="note-card" data-topic="web" data-date="2025-03-05" data-downloads="178">
                 <div class="note-header">
                     <span class="note-tag">Web Development</span>
                     <span class="note-date">March 5, 2025</span>
@@ -460,7 +474,7 @@
             </div>
 
             <!-- Note Card 4 -->
-            <div class="note-card" data-topic="networking">
+            <div class="note-card" data-topic="networking" data-date="2025-02-28" data-downloads="132">
                 <div class="note-header">
                     <span class="note-tag">Networking</span>
                     <span class="note-date">February 28, 2025</span>
@@ -480,7 +494,7 @@
             </div>
 
             <!-- Note Card 5 -->
-            <div class="note-card" data-topic="ai">
+            <div class="note-card" data-topic="ai" data-date="2025-02-20" data-downloads="215">
                 <div class="note-header">
                     <span class="note-tag">Machine Learning</span>
                     <span class="note-date">February 20, 2025</span>

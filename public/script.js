@@ -431,7 +431,87 @@ function expandPathToNote(noteId) {
         }
     }
 }
-// Add this to your existing script.js file
+// Function to filter and sort notes
+function filterNotes() {
+    const searchInput = document.getElementById('searchNotes');
+    const topicFilter = document.getElementById('topicFilter');
+    const sortBy = document.getElementById('sortBy');
+    
+    if (!searchInput || !topicFilter || !sortBy) return;
+    
+    const searchTerm = searchInput.value.toLowerCase();
+    const selectedTopic = topicFilter.value.toLowerCase();
+    const sortOrder = sortBy.value;
+    const noteCards = Array.from(document.querySelectorAll('.note-card'));
+    const noResultsMessage = document.getElementById('noResultsMessage');
+    const notesContainer = document.querySelector('.notes-grid');
+    
+    // Filter notes
+    let visibleNotes = noteCards.filter(card => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        const description = card.querySelector('p')?.textContent.toLowerCase() || '';
+        const topic = card.getAttribute('data-topic').toLowerCase();
+        const matchesSearch = title.includes(searchTerm) || description.includes(searchTerm);
+        const matchesTopic = selectedTopic === 'all' || topic === selectedTopic;
+        
+        return matchesSearch && matchesTopic;
+    });
+    
+    // Sort notes
+    if (sortOrder === 'recent') {
+        visibleNotes.sort((a, b) => {
+            const dateA = new Date(a.getAttribute('data-date') || 0);
+            const dateB = new Date(b.getAttribute('data-date') || 0);
+            return dateB - dateA; // Newest first
+        });
+    } else if (sortOrder === 'popular') {
+        visibleNotes.sort((a, b) => {
+            const downloadsA = parseInt(a.getAttribute('data-downloads') || '0');
+            const downloadsB = parseInt(b.getAttribute('data-downloads') || '0');
+            return downloadsB - downloadsA; // Most popular first
+        });
+    } else if (sortOrder === 'az') {
+        visibleNotes.sort((a, b) => 
+            a.querySelector('h3').textContent.localeCompare(b.querySelector('h3').textContent)
+        );
+    } else if (sortOrder === 'za') {
+        visibleNotes.sort((a, b) => 
+            b.querySelector('h3').textContent.localeCompare(a.querySelector('h3').textContent)
+        );
+    }
+    
+    // Update visibility
+    noteCards.forEach(card => card.style.display = 'none');
+    visibleNotes.forEach(card => card.style.display = 'block');
+    
+    // Show/hide no results message
+    if (noResultsMessage) {
+        if (visibleNotes.length === 0) {
+            noResultsMessage.style.display = 'block';
+        } else {
+            noResultsMessage.style.display = 'none';
+        }
+    }
+    
+    // Reorder notes in DOM to match sort order
+    if (notesContainer) {
+        visibleNotes.forEach(card => notesContainer.appendChild(card));
+    }
+}
+
+// Add event listeners for filters and search
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('searchNotes');
+    const topicFilter = document.getElementById('topicFilter');
+    const sortBy = document.getElementById('sortBy');
+    
+    if (searchInput) searchInput.addEventListener('input', filterNotes);
+    if (topicFilter) topicFilter.addEventListener('change', filterNotes);
+    if (sortBy) sortBy.addEventListener('change', filterNotes);
+    
+    // Initial filter
+    filterNotes();
+});
 
 // Implement smooth scrolling for navigation links
 document.addEventListener("DOMContentLoaded", function () {
@@ -564,4 +644,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Add a scroll event listener to update the active link when the user scrolls
     window.addEventListener("scroll", updateActiveLink);
+
 });
+

@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character encoding and viewport responsiveness -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title -->
+    <title>IT Club Resources Hub</title>
+
+    <!-- Linking Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Questrial:wght@400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Linking external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Linking external JavaScript file with defer to load after HTML parsing -->
+    <script defer src="script.js"></script>
+    
+</head>
+
+<body>
+    <!-- Background gradient for design purposes -->
+    <div class="background-gradient"></div>
+
+    <!-- Header section containing navigation -->
+    <header>
+        <nav>
+            <!-- Logo with an SVG icon -->
+            <a href="#home" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                NoteSphere
+            </a>
+
+            <!-- Mobile navigation menu (hamburger menu) -->
+            <div id="hamburger" class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-overlay"></div>
+
+            <!-- Navigation menu -->
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active" data-en="Home" data-ja="ホーム">Home</a></li>
+                <li><a href="#courses" class="nav-link" data-en="Courses" data-ja="コース">Courses</a></li>
+                <li><a href="#notes" class="nav-link" data-en="Notes" data-ja="ノート">Notes</a></li>
+                <li><a href="#about" class="nav-link" data-en="About Us" data-ja="私たちについて">About Us</a></li>
+                <li><a href="#contact" class="nav-link" data-en="Contact Us" data-ja="お問い合わせ">Contact Us</a></li>
+            </ul>
+
+            <!-- Language toggle button -->
+            <button id="lang-toggle">日本語</button>
+        </nav>
+    </header>
+
+    <!-- Main content area -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="page-section active">
+            <div class="hero-section">
+                <div class="hero-content">
+                    <h1>Welcome to IT Club <span class="highlight">Resources Hub</span></h1>
+                    <p>Your one-stop platform to discover, share, and collaborate on educational resources for IT enthusiasts.</p>
+
+                    <!-- Call-to-action buttons -->
+                    <div class="cta-buttons">
+                        <a href="#courses" class="btn btn-primary page-link">Explore Courses</a>
+                        <a href="#notes" class="btn btn-outline page-link">Browse Notes</a>
+                    </div>
+
+                    <!-- Futuristic tech elements -->
+                    <div class="tech-elements">
+                        <div class="tech-tag">AI</div>
+                        <div class="tech-tag">DEV</div>
+                        <div class="tech-tag">IOT</div>
+                        <div class="tech-tag">Cloud</div>
+                    </div>
+                </div>
+
+                <!-- Hero visual elements with added VR image -->
+                <div class="hero-visual">
+                    <div class="vr-image-container">
+                        <img src="images/vr-user.jpg" alt="Person using VR headset" class="vr-image">
+                        <div class="glow-effect"></div>
+                    </div>
+                    <div class="gradient-card card1"></div>
+                    <div class="gradient-card card2"></div>
+                    <div class="gradient-card card3"></div>
+                </div>
+            </div>
+
+            <!-- Featured Resources Section -->
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Resources</h2>
+                    <p>Discover our most popular learning materials</p>
+                </div>
+
+                <!-- Resource Cards -->
+                <div class="cards-grid">
+                    <!-- Course Card -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Explore Courses</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Explore our comprehensive collection of IT courses including Software Engineering and University of Greenwich programs.</p>
+                            <ul class="featured-list">
+                                <li>University Of Greenwich</li>
+                                <li>Software Engineering</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#courses" class="link-more page-link">View More</a>
+                        </div>
+                    </div>
+
+                    <!-- Study Resources Card -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Study Resources</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Access a variety of study materials, guides, and reference documents to enhance your learning experience.</p>
+                            <ul class="featured-list">
+                                <li>Lecture Notes</li>
+                                <li>Practice Exercises</li>
+                                <li>Project Templates</li>
+                                <li>Exam Preparation</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#notes" class="link-more page-link">View More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upcoming Events Section -->
+                <div class="section-header">
+                    <h2>Upcoming Events</h2>
+                    <p>Join our workshops, webinars, and community meetups</p>
+                </div>
+
+                <!-- Events Container -->
+                <div class="events-container">
+                    <!-- Web Development Workshop Event -->
+                    <div class="event-card">
+                        <div class="event-date">
+                            <span class="day">28</span>
+                            <span class="month">Mar</span>
+                        </div>
+                        <div class="event-details">
+                            <h3>Web Development Workshop</h3>
+                            <p class="event-description">Learn how to build responsive web applications using modern frameworks</p>
+                            <div class="event-meta">
+                                <span class="event-time">6:00 PM - 8:00 PM</span>
+                                <span class="event-location">Online</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-outline btn-sm">Register</a>
+                    </div>
+
+                    <!-- AI & Machine Learning Meetup Event -->
+                    <div class="event-card">
+                        <div class="event-date">
+                            <span class="day">05</span>
+                            <span class="month">Apr</span>
+                        </div>
+                        <div class="event-details">
+                            <h3>AI & Machine Learning Meetup</h3>
+                            <p class="event-description">Join us for a discussion on the latest trends in artificial intelligence</p>
+                            <div class="event-meta">
+                                <span class="event-time">5:30 PM - 7:30 PM</span>
+                                <span class="event-location">Room 203, Tech Building</span>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-outline btn-sm">Register</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
+
+<!-- Courses Page Section -->
+<section id="courses" class="page-section">
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>Explore Our Courses</h1>
+            <p>Comprehensive learning resources for IT enthusiasts at all levels.</p>
+        </div>
+    </div>    
+    <div class="container">
+        <!-- Section Header for Courses -->
+        <div class="section-header">
+            <h2>Available Courses</h2>
+            <p>Browse through our collection of carefully curated educational materials</p>
+        </div>
+
+        <div class="cards-grid">
+            <!-- Software Engineering Course Card -->
+            <div class="card">
+                <div class="card-header">
+                    <h3>Software Engineering</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="tree">
+                        <!-- Semester 1 -->
+                        <li>
+                            <span class="toggle">
+                                <span class="arrow">►</span> Semester 1
+                            </span>
+                            <ul class="nested">
+                                <!-- Module: Programming Fundamentals -->
+                                <li>
+                                    <span class="toggle">
+                                        <span class="arrow">►</span> Programming Fundamentals
+                                    </span>
+                                    <ul class="nested">
+                                        <li class="note-item" data-note-id="python-intro">📄 Introduction to Python</li>
+                                        <li class="note-item" data-note-id="python-datatypes">📄 Data Types & Variables</li>
+                                        <li class="note-item" data-note-id="python-control">📄 Control Structures</li>
+                                    </ul>
+                                </li>
+
+                                <!-- Module: Web Development -->
+                                <li>
+                                    <span class="toggle">
+                                        <span class="arrow">►</span> Web Development
+                                    </span>
+                                    <ul class="nested">
+                                        <li class="note-item" data-note-id="web-html">📄 HTML & CSS Basics</li>
+                                        <li class="note-item" data-note-id="web-js">📄 JavaScript Essentials</li>
+                                        <li class="note-item" data-note-id="web-responsive">📄 Responsive Design</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- Semester 2 -->
+                        <li>
+                            <span class="toggle">
+                                <span class="arrow">►</span> Semester 2
+                            </span>
+                            <ul class="nested">
+                                <!-- Module: Advanced Programming -->
+                                <li>
+                                    <span class="toggle">
+                                        <span class="arrow">►</span> Advanced Programming
+                                    </span>
+                                    <ul class="nested">
+                                        <li class="note-item" data-note-id="adv-oop">📄 Object-Oriented Programming</li>
+                                        <li class="note-item" data-note-id="adv-algo">📄 Algorithms & Data Structures</li>
+                                    </ul>
+                                </li>
+
+                                <!-- Module: Database Systems -->
+                                <li>
+                                    <span class="toggle">
+                                        <span class="arrow">►</span> Database Systems
+                                    </span>
+                                    <ul class="nested">
+                                        <li class="note-item" data-note-id="db-intro">📄 Introduction to Databases</li>
+                                        <li class="note-item" data-note-id="db-sql">📄 SQL Fundamentals</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <!-- Tag to highlight the course -->
+                    <span class="tag">Popular</span>
+                </div>
+            </div>
+
+            <!-- University of Greenwich Course Card -->
+            <div class="card">
+                <div class="card-header">
+                    <h3>University of Greenwich</h3>
+                </div>
+                <div class="card-body">
+                    <ul class="tree">
+                        <!-- Semester 1 -->
+                        <li>
+                            <span class="toggle">
+                                <span class="arrow">►</span> Semester 1
+                            </span>
+                            <ul class="nested">
+                                <!-- Module: Computer Science Basics -->
+                                <li>
+                                    <span class="toggle">
+                                        <span class="arrow">►</span> Computer Science Basics
+                                    </span>
+                                    <ul class="nested">
+                                        <li class="note-item" data-note-id="cs-intro">📄 Introduction to Computing</li>
+                                        <li class="note-item" data-note-id="cs-logic">📄 Logic & Problem Solving</li>
+                                    </ul>
+                                </li>
+
+                                <!-- Module: Software Development -->
+                                <li>
+                                    <span class="toggle">
+                                        <span class="arrow">►</span> Software Development
+                                    </span>
+                                    <ul class="nested">
+                                        <li class="note-item" data-note-id="sd-methods">📄 Development Methodologies</li>
+                                        <li class="note-item" data-note-id="sd-tools">📄 Development Tools</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <!-- Semester 2 -->
+                        <li>
+                            <span class="toggle">
+                                <span class="arrow">►</span> Semester 2
+                            </span>
+                            <ul class="nested">
+                                <!-- Module: Networking & Security -->
+                                <li>
+                                    <span class="toggle">
+                                        <span class="arrow">►</span> Networking & Security
+                                    </span>
+                                    <ul class="nested">
+                                        <li class="note-item" data-note-id="net-basics">📄 Network Fundamentals</li>
+                                        <li class="note-item" data-note-id="sec-intro">📄 Security Principles</li>
+                                    </ul>
+                                </li>
+
+                                <!-- Module: Machine Learning -->
+                                <li>
+                                    <span class="toggle">
+                                        <span class="arrow">►</span> Machine Learning
+                                    </span>
+                                    <ul class="nested">
+                                        <li class="note-item" data-note-id="ml-intro">📄 ML Concepts</li>
+                                        <li class="note-item" data-note-id="ml-models">📄 ML Models & Applications</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <!-- Tag to highlight the course -->
+                    <span class="tag">Recommended</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Notes Page Section -->
+<section id="notes" class="page-section">
+    <div class="hero-section">
+        <h1 data-key="notes-title">Lecture Notes</h1>
+        <p data-key="notes-subtitle">Access comprehensive notes for various IT courses and topics.</p>
+    </div>
+
+    <div class="container">
+        <!-- Search and Filter Section -->
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" id="searchNotes" placeholder="Search for notes...">
+                <button class="search-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="filter-container">
+                <select id="topicFilter">
+                    <option value="all">All Topics</option>
+                    <option value="programming">Programming</option>
+                    <option value="databases">Databases</option>
+                    <option value="web">Web Development</option>
+                    <option value="networking">Networking</option>
+                    <option value="ai">AI & Machine Learning</option>
+                </select>
+
+                <select id="sortBy">
+                    <option value="recent">Most Recent</option>
+                    <option value="popular">Most Popular</option>
+                    <option value="az">A-Z</option>
+                    <option value="za">Z-A</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Notes Grid -->
+        <div class="notes-grid">
+            <!-- Note Card 1 -->
+            <div class="note-card" data-topic="programming">
+                <div class="note-header">
+                    <span class="note-tag">Programming</span>
+                    <span class="note-date">March 15, 2025</span>
+                </div>
+                <div class="note-content">
+                    <h3>Introduction to Python for Data Science</h3>
+                    <p>Comprehensive notes covering Python basics, NumPy, Pandas, and data visualization with Matplotlib.</p>
+                    <div class="note-meta">
+                        <span class="note-author">By Prof. Sarah Johnson</span>
+                        <span class="note-downloads">147 Downloads</span>
+                    </div>
+                </div>
+                <div class="note-footer">
+                    <button class="btn btn-outline">Preview</button>
+                    <button class="btn btn-primary">Download</button>
+                </div>
+            </div>
+
+            <!-- Note Card 2 -->
+            <div class="note-card" data-topic="databases">
+                <div class="note-header">
+                    <span class="note-tag">Databases</span>
+                    <span class="note-date">March 10, 2025</span>
+                </div>
+                <div class="note-content">
+                    <h3>SQL Fundamentals & Database Design</h3>
+                    <p>Complete guide to SQL queries, database normalization, and relational database management systems.</p>
+                    <div class="note-meta">
+                        <span class="note-author">By Dr. Michael Chen</span>
+                        <span class="note-downloads">203 Downloads</span>
+                    </div>
+                </div>
+                <div class="note-footer">
+                    <button class="btn btn-outline">Preview</button>
+                    <button class="btn btn-primary">Download</button>
+                </div>
+            </div>
+
+            <!-- Note Card 3 -->
+            <div class="note-card" data-topic="web">
+                <div class="note-header">
+                    <span class="note-tag">Web Development</span>
+                    <span class="note-date">March 5, 2025</span>
+                </div>
+                <div class="note-content">
+                    <h3>Modern Frontend Development with React</h3>
+                    <p>In-depth notes on React.js, component architecture, state management, and React hooks.</p>
+                    <div class="note-meta">
+                        <span class="note-author">By Prof. Alex Rodriguez</span>
+                        <span class="note-downloads">178 Downloads</span>
+                    </div>
+                </div>
+                <div class="note-footer">
+                    <button class="btn btn-outline">Preview</button>
+                    <button class="btn btn-primary">Download</button>
+                </div>
+            </div>
+
+            <!-- Note Card 4 -->
+            <div class="note-card" data-topic="networking">
+                <div class="note-header">
+                    <span class="note-tag">Networking</span>
+                    <span class="note-date">February 28, 2025</span>
+                </div>
+                <div class="note-content">
+                    <h3>Computer Networks & Security Protocols</h3>
+                    <p>Detailed notes on TCP/IP, network layers, routing algorithms, and network security principles.</p>
+                    <div class="note-meta">
+                        <span class="note-author">By Dr. Emma Williams</span>
+                        <span class="note-downloads">132 Downloads</span>
+                    </div>
+                </div>
+                <div class="note-footer">
+                    <button class="btn btn-outline">Preview</button>
+                    <button class="btn btn-primary">Download</button>
+                </div>
+            </div>
+
+            <!-- Note Card 5 -->
+            <div class="note-card" data-topic="ai">
+                <div class="note-header">
+                    <span class="note-tag">Machine Learning</span>
+                    <span class="note-date">February 20, 2025</span>
+                </div>
+                <div class="note-content">
+                    <h3>Machine Learning Algorithms & Applications</h3>
+                    <p>Comprehensive lecture notes on supervised/unsupervised learning, neural networks, and practical ML implementations.</p>
+                    <div class="note-meta">
+                        <span class="note-author">By Prof. David Kumar</span>
+                        <span class="note-downloads">215 Downloads</span>
+                    </div>
+                </div>
+                <div class="note-footer">
+                    <button class="btn btn-outline">Preview</button>
+                    <button class="btn btn-primary">Download</button>
+                </div>
+            </div>
+
+            <!-- Note Card 6 -->
+            <div class="note-card" data-topic="programming">
+                <div class="note-header">
+                    <span class="note-tag">Programming</span>
+                    <span class="note-date">February 15, 2025</span>
+                </div>
+                <div class="note-content">
+                    <h3>Advanced Data Structures & Algorithms</h3>
+                    <p>Detailed notes on complex data structures, algorithm design, and problem-solving techniques.</p>
+                    <div class="note-meta">
+                        <span class="note-author">By Dr. James Wilson</span>
+                        <span class="note-downloads">167 Downloads</span>
+                    </div>
+                </div>
+                <div class="note-footer">
+                    <button class="btn btn-outline">Preview</button>
+                    <button class="btn btn-primary">Download</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn">4</button>
+            <button class="page-btn next">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- About Page Section -->
+<section id="about" class="page-section">
+    <div class="hero-section">
+        <h1 data-key="about-title">About IT Club Resources Hub</h1>
+        <p data-key="about-subtitle">Learn about our mission, team, and the story behind our platform.</p>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h2 data-key="our-mission">Our Mission</h2>
+            </div>
+            <div class="card-body">
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="images/Club Team.jpg" alt="IT Club Team" />
+                    </div>
+                    <div class="about-text">
+                        <p>The IT Club Resources Hub was founded in 2023 with a simple mission: to create an accessible and collaborative platform where students and IT enthusiasts can share knowledge, resources, and experiences.</p>
+                        <p>Our goal is to bridge the gap between theoretical education and practical application by providing high-quality learning materials, study notes, and project examples that help our community develop valuable IT skills.</p>
+                        <p>We believe that technology education should be accessible to everyone, regardless of their background or location. By fostering a community where knowledge is freely shared and collaboration is encouraged, we aim to empower the next generation of IT professionals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2 data-key="our-team">Our Team</h2>
+            </div>
+            <div class="card-body">
+                <div class="team-grid">
+                    <!-- Team Member 1 -->
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="images/Hiroshi Tanaka.jpg" alt="Hiroshi Tanaka" />
+                        </div>
+                        <h3>Hiroshi Tanaka</h3>
+                        <p class="member-role">Founder & Lead Developer</p>
+                        <p class="member-bio">Computer Science graduate with 5+ years of experience in web development and a passion for teaching technology.</p>
+                    </div>
+
+                    <!-- Team Member 2 -->
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="images/Yuki Sato.jpg" alt="Yuki Sato" />
+                        </div>
+                        <h3>Yuki Sato</h3>
+                        <p class="member-role">Content Director</p>
+                        <p class="member-bio">Educational technology specialist with experience in curriculum development and digital content creation.</p>
+                    </div>
+
+                    <!-- Team Member 3 -->
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="images/Akira Nakamura.jpg" alt="Akira Nakamura" />
+                        </div>
+                        <h3>Akira Nakamura</h3>
+                        <p class="member-role">Community Manager</p>
+                        <p class="member-bio">Former IT instructor with expertise in building and nurturing online learning communities.</p>
+                    </div>
+
+                    <!-- Team Member 4 -->
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="images/Mei Yamamoto.jpg" alt="Mei Yamamoto" />
+                        </div>
+                        <h3>Mei Yamamoto</h3>
+                        <p class="member-role">UX/UI Designer</p>
+                        <p class="member-bio">Designer specialized in creating intuitive and accessible interfaces for educational platforms.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2 data-key="our-story">Our Story</h2>
+            </div>
+            <div class="card-body">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>2023</h3>
+                            <p>The IT Club was founded by a group of computer science students at Tokyo University who wanted to create a collaborative learning environment.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>2024</h3>
+                            <p>Launched the first version of the Resources Hub to share study materials among club members and other university students.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>2025</h3>
+                            <p>Expanded the platform to include contributions from multiple universities and IT professionals, creating a comprehensive resource library.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Future</h3>
+                            <p>We're working on developing interactive learning modules, community events, and expanding our resources to cover emerging technologies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Page Section -->
+<section id="contact" class="page-section">
+    <div class="hero-section">
+        <h1 data-key="contact-title">Get in Touch</h1>
+        <p data-key="contact-subtitle">Have questions or want to join the IT Club? We'd love to hear from you!</p>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h2 data-key="contact-form">Contact Form</h2>
+            </div>
+            <div class="card-body">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your email address" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject" required>
+                            <option value="" disabled selected>Select a subject</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="membership">Membership</option>
+                            <option value="event">Event Information</option>
+                            <option value="resources">Resource Sharing</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <h2 data-key="contact-info">Contact Information</h2>
+            </div>
+            <div class="card-body">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M22 16.92V19.92C22 20.4704 21.7893 20.9996 21.4142 21.3746C21.0391 21.7497 20.5099 21.9604 19.9595 21.96C16.4292 21.6815 13.0159 20.451 10.0638 18.39C7.3435 16.5207 5.0834 14.2606 3.2142 11.54C1.1443 8.57336 -0.0871025 5.14824 0.0400128 1.61C0.0395632 1.0631 0.2453 0.536386 0.6151 0.160351C0.985 -0.215685 1.5094 -0.430115 2.05736 -0.440001H5.05736C6.0344 -0.452123 6.92089 0.236518 7.2096 1.17C7.39517 1.9 7.6551 2.60884 7.9842 3.29C8.2804 3.9193 8.2428 4.647 7.8842 5.24L6.6342 7.24C8.3547 10.0881 10.6753 12.4087 13.5236 14.13L15.5236 12.88C16.1167 12.5211 16.8445 12.4839 17.4742 12.78C18.1546 13.1092 18.8635 13.3692 19.5936 13.55C20.5409 13.8409 21.2334 14.7481 21.1996 15.74L22 16.92Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Phone</h3>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <p>mail@itclubhub.edu.lk</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.364 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Location</h3>
+                            <p>University Campus, Building C, Room 302</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 8V12L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Office Hours</h3>
+                            <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 IT Club Resources Hub. All rights reserved.</p>
+        </div>
+    </footer>
+    </body>
+
+    </html>
